@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import { Platform, StyleSheet, Text, View, Button } from "react-native";
 import codePush from "react-native-code-push";
 
 const instructions = Platform.select({
@@ -48,8 +48,13 @@ export default class App extends Component {
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
+        <Button title="Click here" onPress={() => this.test()} />
       </View>
     );
+  }
+
+  test() {
+    alert("you clicked");
   }
 }
 
