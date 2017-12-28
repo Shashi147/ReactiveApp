@@ -11,6 +11,7 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.microsoft.appcenter.reactnative.shared.BuildConfig;
 import com.microsoft.codepush.react.CodePush;
 
 import java.util.Arrays;
@@ -38,7 +39,7 @@ public class MainApplication extends Application implements ReactApplication {
             new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appcenterCrashes_whenToSendCrashes)),
             new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appcenterAnalytics_whenToEnableAnalytics)),
             new AppCenterReactNativePackage(MainApplication.this),
-            new CodePush(BuildConfig.CODEPUSH_KEY, MainApplication.this, BuildConfig.DEBUG) // Add/change this line.
+            new CodePush("Caa6kIYqDZ1r74-lvUt6Nqr3tvt-SypJJClXG", MainApplication.this, BuildConfig.DEBUG) // Add/change this line.
       );
     }
 
